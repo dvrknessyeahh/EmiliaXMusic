@@ -1,9 +1,9 @@
 {
-    "name": "KennedyX Music",
+    "name": "EmiliaX Music",
     "logo": "https://telegra.ph/file/73cbefa8401982900fe81.jpg",
-    "description": "KennedyX Music allow you to stream music trought the telegram voice chat feature.",
+    "description": "EmiliaX Music allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/KennedyProject/KennedyXMusic",
+    "repository": "https://github.com/EmiliaTzy/EmiliaXMusic",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -26,7 +26,7 @@
         "BOT_USERNAME": {
             "description": "Fill woth your blt username without @",
             "required": true,
-            "value": "KenzxMusicBot"
+            "value": "EmiliaMusic1_Bot"
         },
         "U_BRANCH": {
             "description": "This branch the repo DON'T CHANGE!",
@@ -46,7 +46,7 @@
         "UPSTREAM_REPO": {
             "description": "If you forking, put your link on this value. if you not forking LEAVE THIS ONE!",
             "required": true,
-            "value": "https://github.com/KennedyProject/KennedyXMusic"
+            "value": "https://github.com/EmiliaTzy/EmiliaXMusic"
         },
         "BOT_IMG": {
             "description": "For alive pic.",
@@ -71,7 +71,7 @@
         "OWNER_NAME": {
             "description": "Fill with your username account without @",
             "required": false,
-            "value": "xgothboi"
+            "value": "azkiya"
         },
         "API_ID": {
             "description": "APP ID from my.telegram.org",
@@ -98,12 +98,12 @@
         "UPDATES_CHANNEL": {
             "description": "Fill with your channel username without @, if you haven't one you can leave it default",
             "required": false,
-            "value": "KennedyProject"
+            "value": "EmiliaProject"
         },
         "GROUP_SUPPORT": {
             "description": "Fill with your group username without @, if your haven't one you can leave it default",
             "required": false,
-            "value": "kenbotsupport"
+            "value": "EmiliaSupport"
         }
     },
     "buildpacks": [
