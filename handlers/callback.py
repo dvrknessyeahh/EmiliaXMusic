@@ -266,10 +266,7 @@ async def cbfun(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""<b>{alv} **Command fun**
 
-**/chika - check it yourself
-/wibu - check it yourself
-/asupan - check yourself
-/truth - check yourself
+**/truth - check yourself
 /dare - check it yourself
 /q - to make quotes text
 /paste - pasting your text or document to pastebin into photo
@@ -290,7 +287,7 @@ async def cbfun(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbguide"))
 async def cbguide(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""**HOW TO USE THIS BOTT :**
+        f"""**BAGAIMANA MENGGUNAKAN BOT INI :**
 
 **1.) Pertama, tambahkan ke grup Anda.
 2.) Kemudian jadikan sebagai admin dengan semua izin kecuali admin anonim.
