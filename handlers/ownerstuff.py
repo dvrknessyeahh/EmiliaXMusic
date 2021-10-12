@@ -34,7 +34,7 @@ BRANCH_ = U_BRANCH
 @Client.on_message(command("update"))
 @sudo_users_only
 async def updatebot(_, message: Message):
-    msg = await message.reply_text("**updating bot, please wait for a while...**")
+    msg = await message.reply_text("**mengupdate bot, mohon tunggu beberapa saat...**")
     try:
         repo = Repo()
     except GitCommandError:
@@ -51,7 +51,7 @@ async def updatebot(_, message: Message):
         repo.heads.main.checkout(True)
     if repo.active_branch.name != U_BRANCH:
         return await msg.edit(
-            f"**sorry, you are using costum branch named:** `{repo.active_branch.name}`!\n\nchange to `{U_BRANCH}` branch to continue update!"
+            f"**maaf, anda menggunakan branch bebas bernama:** `{repo.active_branch.name}`!\n\nchange to `{U_BRANCH}` branch to continue update!"
         )
     try:
         repo.create_remote("upstream", REPO_)
@@ -72,7 +72,7 @@ async def updatebot(_, message: Message):
         return
     else:
         await msg.edit("`heroku detected!`")
-        await msg.edit("`updating and restarting is started, please wait for 5-10 minutes!`")
+        await msg.edit("`update dan restart dimulai, mohon tunggu 5-10 menit!`")
         ups_rem.fetch(U_BRANCH)
         repo.git.reset("--hard", "FETCH_HEAD")
         if "heroku" in repo.remotes:
@@ -123,14 +123,14 @@ def _check_heroku(func):
     async def heroku_cli(client, message):
         heroku_app = None
         if not heroku_client:
-            await message.reply_text("`Please Add Heroku API Key To Use This Feature!`")
+            await message.reply_text("`Mohon tambahkan Heroku API Key untuk menggunakan fitur ini!`")
         elif not HEROKU_APP_NAME:
-            await edit_or_reply(message, "`Please Add Heroku APP Name To Use This Feature!`")
+            await edit_or_reply(message, "`Mohon tambahkan Heroku APP name untuk menggunakan fitur ini!`")
         if HEROKU_APP_NAME and heroku_client:
             try:
                 heroku_app = heroku_client.app(HEROKU_APP_NAME)
             except:
-                await message.reply_text(message, "`Heroku Api Key And App Name Doesn't Match! Check it again`")
+                await message.reply_text(message, "`Heroku Api Key dan App Name Tidak Cocok! Cek kembali`")
             if heroku_app:
                 await func(client, message, heroku_app)
 
@@ -141,7 +141,7 @@ def _check_heroku(func):
 @sudo_users_only
 @_check_heroku
 async def logswen(client: Client, message: Message, happ):
-    msg = await message.reply_text("`please wait for a moment!`")
+    msg = await message.reply_text("`mohon tunggu beberapa saat!`")
     logs = happ.get_log()
     capt = f"Heroku logs of `{HEROKU_APP_NAME}`"
     await edit_or_send_as_file(logs, msg, client, capt, "logs")
@@ -152,7 +152,7 @@ async def logswen(client: Client, message: Message, happ):
 @sudo_users_only
 @_check_heroku
 async def restart(client: Client, message: Message, hap):
-    await message.reply_text("`restarting now, please wait...`")
+    await message.reply_text("`me-restart sekarang, mohon tunggu...`")
     hap.restart()
 
 
@@ -161,18 +161,18 @@ async def restart(client: Client, message: Message, hap):
 @sudo_users_only
 @_check_heroku
 async def setvar(client: Client, message: Message, app_):
-    msg = await message.reply_text("`please wait...`")
+    msg = await message.reply_text("`mohon tunggu...`")
     heroku_var = app_.config()
     _var = get_text(message)
     if not _var:
-        await msg.edit("**usage:** `/setvar (var) (value)`")
+        await msg.edit("**penggunaan:** `/setvar (var) (value)`")
         return
     if " " not in _var:
-        await msg.edit("**usage:** `/setvar (var) (value)`")
+        await msg.edit("**penggunaan:** `/setvar (var) (value)`")
         return
     var_ = _var.split(" ", 1)
     if len(var_) > 2:
-        await msg.edit("**usage:** `/setvar (var) (value)`")
+        await msg.edit("**penggunaan:** `/setvar (var) (value)`")
         return
     _varname, _varvalue = var_
     await msg.edit(f"**variable:** `{_varname}` \n**new value:** `{_varvalue}`")
@@ -184,16 +184,16 @@ async def setvar(client: Client, message: Message, app_):
 @sudo_users_only
 @_check_heroku
 async def delvar(client: Client, message: Message, app_):
-    msg = await message.reply_text("`please wait...!`")
+    msg = await message.reply_text("`mohon tunggu...!`")
     heroku_var = app_.config()
     _var = get_text(message)
     if not _var:
-        await msg.edit("`give a var name to delete!`")
+        await msg.edit("`berikan sebuah nama var untuk dihapus!`")
         return
     if _var not in heroku_var:
-        await msg.edit("`this var doesn't exists!`")
+        await msg.edit("`var ini tidak bisa dikeluarkan!`")
         return
-    await msg.edit(f"sucessfully deleted var `{_var}`")
+    await msg.edit(f"berhasil menghapus var `{_var}`")
     del heroku_var[_var]
 
 
@@ -210,7 +210,7 @@ def _check_heroku(func):
     @wraps(func)
     async def heroku_cli(client, message):
         if not heroku_client:
-            await edit_or_reply(message, "`Please Add Heroku API Key For This To Function To Work!`")
+            await edit_or_reply(message, "`Mohon tambahkan Heroku API Key dari fungsi ini untuk bekerja!`")
         else:
             await func(client, message, heroku_client)
     return heroku_cli
@@ -240,7 +240,7 @@ def fetch_heroku_git_url(api_key, app_name):
 @sudo_users_only
 @_check_heroku
 async def gib_usage(client, message, hc):
-  msg_ = await message.reply_text("`[HEROKU] - Please Wait.`")
+  msg_ = await message.reply_text("`[HEROKU] - Mohon tunggu.`")
   useragent = (
         "Mozilla/5.0 (Linux; Android 10; SM-G975F) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -256,7 +256,7 @@ async def gib_usage(client, message, hc):
   path = "/accounts/" + acc_id + "/actions/get-quota"
   r = requests.get(heroku_api + path, headers=headers)
   if r.status_code != 200:
-        return await msg_.edit(f"`[{r.status_code}] - Something Isn't Right. Please Try Again Later.`")
+        return await msg_.edit(f"`[{r.status_code}] - Sesuatu tidak dapat dilakukan. Mohon coba kembali.`")
   result = r.json()
   quota = result["account_quota"]
   quota_used = result["quota_used"]
@@ -278,11 +278,11 @@ async def gib_usage(client, message, hc):
   AppMinutes = math.floor(AppQuotaUsed % 60)
   app_name = HEROKU_APP_NAME or "Not Specified."
   return await msg_.edit(
-        f"📅 <b>Dyno Usage {app_name}</b>\n\n"
-        f"<b>✗ Usage in Hours And Minutes :</b>\n"
+        f"📅 <b>Penggunaan Dyno {app_name}</b>\n\n"
+        f"<b>✗ Penggunaan Dalam Jam Dan Menit :</b>\n"
         f" • <code>{AppHours}h {AppMinutes}m</code>"
         f" | <code>[{AppPercentage} %]</code> \n\n"
-        "<b>✗ Dyno Remaining This Months: </b>\n"
+        "<b>✗ Sisa Dyno Bulan Ini : </b>\n"
         f" • <code>{hours}h {minutes}m</code>"
         f" | <code>[{percentage}%]</code>",
     )
