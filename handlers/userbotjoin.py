@@ -15,7 +15,7 @@ async def addchannel(client, message):
     try:
         invitelink = await client.export_chat_invite_link(chid)
     except:
-        await message.reply_text("<b>promote me as admin first !</b>")
+        await message.reply_text("<b>Jadikan saya sebagai admin terlebih dahulu !</b>")
         return
 
     try:
@@ -25,9 +25,9 @@ async def addchannel(client, message):
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "🤖: i'm joined here for playing music on voice chat")
+        await USER.send_message(message.chat.id, "🤖: saya bergabung disini untuk memutar musik di obrolan suara")
     except UserAlreadyParticipant:
-        await message.reply_text(f"<b>✅ userbot already joined chat</b>")
+        await message.reply_text(f"<b>✅ userbot sudah bergabung ke obrolan</b>")
     except Exception as e:
         print(e)
         await message.reply_text(
@@ -35,7 +35,7 @@ async def addchannel(client, message):
             "\n\nor manually add assistant to your Group and try again</b>",
         )
         return
-    await message.reply_text(f"<b>✅ userbot successfully joined chat</b>")
+    await message.reply_text(f"<b>✅ userbot berhasil bergabung ke obrolan</b>")
 
 
 @Client.on_message(command(["userbotleave", f"userbotleave@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
@@ -56,16 +56,16 @@ async def bye(client, message):
 
     left = 0
     failed = 0
-    lol = await message.reply("Assistant Leaving all chats")
+    lol = await message.reply("Assistant Keluar Semua Grup")
     async for dialog in USER.iter_dialogs():
         try:
             await USER.leave_chat(dialog.chat.id)
             left += 1
             await lol.edit(
-                f"Assistant leaving all group... \n\nLeft: {left} chats. Failed: {failed} chats."
+                f"Assistant keluar dari semua grup... \n\nLeft: {left} chats. Failed: {failed} chats."
             )
         except:
             failed += 1
-            await lol.edit(f"Assistant leaving... Left: {left} chats. Failed: {failed} chats.")
+            await lol.edit(f"Assistant keluar... Left: {left} chats. Failed: {failed} chats.")
         await asyncio.sleep(0.7)
     await client.send_message(message.chat.id, f"Left {left} chats. Failed {failed} chats.")
