@@ -42,21 +42,21 @@ def song(client, message):
         results[0]["url_suffix"]
         results[0]["views"]
     except Exception as e:
-        m.edit("❌ **Song Not found.**\n\n**Try Entering a clearer song title.**")
+        m.edit("❌ **Lagu tidak ditemukan.**\n\n**Coba masukkan judul lagu yang benar.**")
         print(str(e))
         return
-    m.edit("📥 **Downloading**")
+    m.edit("📥 **Mengunduh**")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
         rep = f"""
-**🏷 Title :** [{title}]({link})
-**⏱️ Duration :** {duration}
-**👁 Viewer :** {results[0]['views']}
-**🤖 Uploader :** [{BOT_NAME}](https://t.me/{BOT_USERNAME})
-**👤 Requested by :** {rpk}
+**🏷 Judul :** [{title}]({link})
+**⏱️ Durasi :** {duration}
+**👁 Views :** {results[0]['views']}
+**🤖 Unggahan :** [{BOT_NAME}](https://t.me/{BOT_USERNAME})
+**👤 Permintaan dari :** {rpk}
 """
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
@@ -239,17 +239,17 @@ async def ytmusic(client, message: Message):
     global is_downloading
     if is_downloading:
         await message.reply_text(
-            "**Downloadan yang lain sedang berlangsung, coba lagi nanti**"
+            "**Unduhan yang lain sedang berlangsung, coba lagi nanti**"
         )
         return
 
     urlissed = get_text(message)
 
     pablo = await client.send_message(
-        message.chat.id, f"`Getting {urlissed} From YouTube. Please wait!`"
+        message.chat.id, f"`Mendapatkan {urlissed} Dari YouTube. Mohon tunggu!`"
     )
     if not urlissed:
-        await pablo.edit("**Syntax error** type /help for more info!`")
+        await pablo.edit("**Syntax error** ketik /help untuk mengetahu info lengkapnya!`")
         return
 
     search = SearchVideos(f"{urlissed}", offset=1, mode="dict", max_results=1)
@@ -290,13 +290,13 @@ async def ytmusic(client, message: Message):
             ytdl_data = ytdl.extract_info(url, download=True)
 
     except Exception:
-        # await pablo.edit(event, f"**Failed To Download** \n**Error :** `{str(e)}`")
+        # await pablo.edit(event, f"**Gagal mengunduh** \n**Error :** `{str(e)}`")
         is_downloading = False
         return
 
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"**Title ➠** [{thum}]({mo}) \n**Channel ➠ ** {thums} \n**Requested for ➠** {urlissed} "
+    capy = f"**Judul ➠** [{thum}]({mo}) \n**Channel ➠ ** {thums} \n**Permintaan dari ➠** {urlissed} "
     await client.send_video(
         message.chat.id,
         video=open(file_stark, "rb"),
@@ -309,7 +309,7 @@ async def ytmusic(client, message: Message):
         progress_args=(
             pablo,
             c_time,
-            f"**Uploading** `{urlissed}` **From YouTube Music!**",
+            f"**Mengunggah** `{urlissed}` **Dari YouTube Musik!**",
             file_stark,
         ),
     )
@@ -334,10 +334,10 @@ async def jssong(_, message):
     if len(message.command) < 2:
         return await message.reply_text("/saavn requires an argument.")
     if is_downloading:
-        return await message.reply_text("Another download is in progress, try again after sometime.")
+        return await message.reply_text("Unduhan lain sedang berjalan, coba kembali setelah beberapa saat.")
     is_downloading = True
     text = message.text.split(None, 1)[1]
-    m = await message.reply_text("Searching...")
+    m = await message.reply_text("Mencari...")
     try:
         songs = await arq.saavn(text)
         if not songs.ok:
@@ -348,9 +348,9 @@ async def jssong(_, message):
         slink = songs.result[0].media_url
         ssingers = songs.result[0].singers
         sduration = songs.result[0].duration
-        await m.edit("Downloading")
+        await m.edit("Mengunduh")
         song = await download_song(slink)
-        await m.edit("Uploading")
+        await m.edit("Mengunggah")
         await message.reply_audio(
             audio=song,
             title=sname,
