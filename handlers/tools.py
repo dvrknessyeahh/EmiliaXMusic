@@ -139,22 +139,22 @@ async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
 async def fetch_audio(client, message):
     time.time()
     if not message.reply_to_message:
-        await message.reply("`Reply To A Video / Audio.`")
+        await message.reply("`Balas ke Video / Audio.`")
         return
     warner_stark = message.reply_to_message
     if warner_stark.audio is None and warner_stark.video is None:
-        await message.reply("`Format Not Supported`")
+        await message.reply("`Format Tidak Mendukung`")
         return
     if warner_stark.video:
-        lel = await message.reply("`Video Detected, Converting To Audio !`")
+        lel = await message.reply("`Video Terdeteksi, Mengconvert ke Audio !`")
         warner_bros = await message.reply_to_message.download()
         stark_cmd = f"ffmpeg -i {warner_bros} -map 0:a friday.mp3"
         await runcmd(stark_cmd)
         final_warner = "friday.mp3"
     elif warner_stark.audio:
-        lel = await edit_or_reply(message, "`Download Started !`")
+        lel = await edit_or_reply(message, "`Unduhan Dimulai !`")
         final_warner = await message.reply_to_message.download()
-    await lel.edit("`Almost Done!`")
+    await lel.edit("`Hampir Selesai!`")
     await lel.delete()
     return final_warner
 
@@ -174,22 +174,22 @@ async def edit_or_reply(message, text, parse_mode="md"):
 async def shazamm(client, message):
     kek = await edit_or_reply(message, "`Shazaming In Progress!`")
     if not message.reply_to_message:
-        await kek.edit("Reply To The Audio.")
+        await kek.edit("Balas ke Audio.")
         return
     if os.path.exists("friday.mp3"):
         os.remove("friday.mp3")
     kkk = await fetch_audio(client, message)
     downloaded_file_name = kkk
     f = {"file": (downloaded_file_name, open(downloaded_file_name, "rb"))}
-    await kek.edit("**Searching For This Song In DataBase.**")
+    await kek.edit("**Mencari Lagu Ini Dalam DataBase.**")
     r = requests.post("https://starkapi.herokuapp.com/shazam/", files=f)
     try:
         xo = r.json()
     except JSONDecodeError:
-        await kek.edit("`Seems Like Our Server Has Some Issues, Please Try Again Later!`")
+        await kek.edit("`Sepertinya Server Kami Memiliki Beberapa Masalah, Silakan Coba Lagi Nanti!`")
         return
     if xo.get("success") is False:
-        await kek.edit("`Song Not Found IN Database. Please Try Again.`")
+        await kek.edit("`Lagu Tidak Ditemukan Dalam Database. Mohon Coba Kembali.`")
         os.remove(downloaded_file_name)
         return
     xoo = xo.get("response")
@@ -201,8 +201,8 @@ async def shazamm(client, message):
     by = zzz.get("subtitle")
     title = zzz.get("title")
     messageo = f"""<b>Song Shazamed.</b>
-Song Name : {title}
-Song By : {by}
+Judul Lagu : {title}
+Lagu dari : {by}
 Identified Song
 Powered by @{BOT_USERNAME}
 """
@@ -245,17 +245,17 @@ async def jsonify(_, message):
 async def take_ss(_, message: Message):
     try:
         if len(message.command) != 2:
-            return await message.reply_text("Give A Url To Fetch Screenshot.")
+            return await message.reply_text("Berikan Sebuah Url Untuk Mengambil Screenshot.")
         url = message.text.split(None, 1)[1]
-        m = await message.reply_text("**Taking Screenshot**")
-        await m.edit("**Uploading**")
+        m = await message.reply_text("**Mengambil Screenshot**")
+        await m.edit("**Mengunggah**")
         try:
             await message.reply_photo(
                 photo=f"https://webshot.amanoteam.com/print?q={url}",
                 quote=False,
             )
         except TypeError:
-            return await m.edit("No Such Website.")
+            return await m.edit("Tidak ada Situs Web seperti itu .")
         await m.delete()
     except Exception as e:
         await message.reply_text(str(e))
@@ -275,12 +275,12 @@ async def make_carbon(code):
 @Client.on_message(command("carbon"))
 async def carbon_func(client, message):
     if not message.reply_to_message:
-        return await message.reply_text("Reply to a text message to make carbon.")
+        return await message.reply_text("Balas ke sebuah pesan teks untuk membuat carbon.")
     if not message.reply_to_message.text:
-        return await message.reply_text("Reply to a text message to make carbon.")
-    m = await message.reply_text("Preparing Carbon")
+        return await message.reply_text("Balas ke sebuah pesan teks untuk membuat carbon.")
+    m = await message.reply_text("Menyiapkan Carbon")
     carbon = await make_carbon(message.reply_to_message.text)
-    await m.edit("Uploading")
+    await m.edit("Mengunggah")
     await client.send_photo(message.chat.id, carbon)
     await m.delete()
     carbon.close()
