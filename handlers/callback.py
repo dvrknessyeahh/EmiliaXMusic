@@ -45,7 +45,7 @@ async def cbstart(_, query: CallbackQuery):
                         "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ​ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        "ʀᴇᴘᴏ​​", url="https://github.com/KennedyProject/KennedyXMusic"
+                        "ʀᴇᴘᴏ​​", url="https://github.com/EmiliaTzy/EmiliaXMusic"
                     ),
                     InlineKeyboardButton(
                         "ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{GROUP_SUPPORT}")
@@ -144,22 +144,22 @@ async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""<b>{alv} basic commands for bots
 
-[GROUP SETTINGS]
-/play (title) - play music via youtube
-/ytp (title) - play music live
-/stream (reply to audio) - play music via reply to audio
-/playlist - view queue list
-/song (title) - download music from youtube
-/search (title) - search for music from youtube in detail
-/saavn (title) - download music from saavn
-/video (title) - download music from youtube in detail
-/lyric (title) - search for lyrics
-/shazam (reply audio) - for identifying song name
-/q (reply text) - to make a quotes sticker
-/id - to show your id or chat id
-[ MORE ]
-/alive - check alive bot
-/start - starting bot
+[PENGATURAN GRUP]
+/play (judul) - memutar musik melalui youtube
+/ytp (judul) - putar musik secara langsung
+/stream (membalas audio) - memutar musik melalui balasan ke audio
+/playlist - lihat daftar antrian
+/song (judul) - unduh musik dari youtube
+/search (judul) - mencari musik dari youtube secara detail
+/saavn (judul) - unduh musik dari saavn
+/video (judul) - unduh musik dari youtube secara detail
+/lirik (judul) - cari lirik
+/shazam (audio balasan) - untuk mengidentifikasi nama lagu
+/q (teks balasan) - untuk membuat stiker tanda kutip
+/id - untuk menunjukkan id atau id obrolan Anda
+[ LAGI ]
+/alive - periksa status bot
+/start - memulai bot
 
 💡 Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
@@ -211,13 +211,13 @@ async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""<b>{alv} command for group admin
 
-/player - view playback status
-/pause - pauses playing music
-/resume - resume paused music
-/skip - skip to next song
-/end - mute the music
-/userbotjoin - invite assistant to join the group
-/musicplayer (on / off) - turn on / off the music player in your group
+/player - lihat status pemutaran
+/pause - menjeda pemutaran musik
+/resume - melanjutkan musik yang dijeda
+/skip - lompat ke lagu berikutnya
+/end - bisukan musiknya
+/userbotjoin - undang asisten untuk bergabung dengan grup
+/musicplayer (on / off) - nyalakan / matikan pemutar musik di grup Anda
 
 💡 Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
@@ -237,16 +237,16 @@ async def cbsudo(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""<b>{alv} **command for sudo**
 
-**/userbotleaveall - remove assistant from all groups
-/gcast - send global messages via assistant
-/rmd - delete downloaded files
-/uptime - for see the uptime and start time bot launched
-if using heroku
-/usage - for check you dyno heroku
-/update - for build update your bot
-/restart - restart/reboot your bot
-/setvar (var) (value) - to update your value variable on heroku
-/delvar (var) - to delete your var on heroku.
+**/userbotleaveall - hapus asisten dari semua grup
+/gcast - mengirim pesan global melalui asisten
+/rmd - hapus file yang diunduh
+/ uptime - untuk melihat uptime dan waktu mulai bot diluncurkan
+jika menggunakan heroku
+/penggunaan - untuk memeriksa dyno heroku
+/update - untuk membangun, perbarui bot Anda
+/restart - restart/boot ulang bot Anda
+/setvar (var) (nilai) - untuk memperbarui variabel nilai Anda di heroku
+/delvar (var) - untuk menghapus var Anda di heroku.
 
 💡 Bot by @{OWNER_NAME}**""",
         reply_markup=InlineKeyboardMarkup(
@@ -292,10 +292,10 @@ async def cbguide(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""**HOW TO USE THIS BOTT :**
 
-**1.) First, add to your group.
-2.) Then make admin with all permissions except anonymous admin.
-3.) Add @{ASSISTANT_NAME} to your group or type `/userbotjoin` to invite assistant.
-4.) Turn on voice chat first before playing music.
+**1.) Pertama, tambahkan ke grup Anda.
+2.) Kemudian jadikan sebagai admin dengan semua izin kecuali admin anonim.
+3.) Tambahkan @{ASSISTANT_NAME} ke grup Anda atau ketik /userbotjoin untuk mengundang asisten.
+4.) Aktifkan obrolan suara terlebih dahulu sebelum memutar musik.
 
 💡 Bot by @{OWNER_NAME}**""",
         reply_markup=InlineKeyboardMarkup(
