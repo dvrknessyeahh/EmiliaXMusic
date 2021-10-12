@@ -1,7 +1,7 @@
-<h1 align="centre">Kennedy X Music 🎵
+<h1 align="centre">Emilia X Music 🎵
 
 ### Music bot for playing music on telegram voice chat group.
-<p align="center"><a href="https://t.me/kenbotsupport"><img src="https://telegra.ph/file/64cb85ec99e12dc0f8e47.jpg" width="300"></a></p>
+<p align="center"><a href="https://t.me/EmiliaSupport"><img src="https://telegra.ph/file/07bd09306a4485583893e.jpg" width="300"></a></p>
 
 <h3>Requirements</h3>
 
@@ -85,6 +85,7 @@ The easy way to host this bot, deploy to Heroku
 - [Feri](https://github.com/FeriEXP) Dev
 - [RojSerBest](https://github.com/rojserbest) CallsMusic Developer
 - [Veez Music](https://github.com/levina-lab/veezmusic) Veez Music
+- [Emilia](https://github.com/EmiliaTzy) Emilia Music
 
 ### Support & Updates 🛵
-<a href="https://t.me/kenbotsupport"><img src="https://img.shields.io/badge/Join-Group%20Support-red.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/KennedyProject"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/EmiliaSupport"><img src="https://img.shields.io/badge/Join-Group%20Support-red.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/EmiliaProject"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
