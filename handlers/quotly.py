@@ -38,10 +38,10 @@ def isArgInt(message: Message) -> bool:
 @Client.on_message(command(["q", "quotly"]))
 async def quotly_func(client, message: Message):
     if not message.reply_to_message:
-        return await message.reply_text("`Reply to a message to quote it.`")
+        return await message.reply_text("`Balas ke pesan untuk quote.`")
     if not message.reply_to_message.text:
-        return await message.reply_text("`Replied message has no text, can't quote it.`")
-    m = await message.reply_text("`Quoting Messages Please wait....`")
+        return await message.reply_text("`Pesan yang dibalas tidak memiliki teks, tidak dapat melakukan quote .`")
+    m = await message.reply_text("`Quoting Pesan Mohon tunggu....`")
     if len(message.command) < 2:
         messages = [message.reply_to_message]
 
@@ -88,8 +88,8 @@ async def quotly_func(client, message: Message):
     except Exception as e:
         await m.edit(
             "Something wrong happened while quoting messages,"
-            + " This error usually happens when there's a "
-            + " message containing something other than text."
+            + " Kesalahan ini biasanya terjadi "
+            + " Pesan yang berisi sesuatu selain teks."
         )
         e = format_exc()
         print(e)
