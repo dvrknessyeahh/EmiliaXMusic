@@ -11,97 +11,97 @@
             "required": true
         },
         "ARQ_API_KEY": {
-            "description": "For lyric and quotly modules, get on @ARQRobot",
+            "description": "Untuk lirik dan quotly, dapatkan di @ARQRobot",
             "required": true
         },
         "BOT_TOKEN": {
-            "description": "Your bot token from @BotFather",
+            "description": "Token botmu dari @BotFather",
             "required": true
         },
         "BOT_NAME": {
-            "description": "Your musicplayer name.",
+            "description": "Nama bot Musikmu.",
             "required": true,
             "value": ""
         },
         "BOT_USERNAME": {
-            "description": "Fill woth your blt username without @",
+            "description": "isi username bot tanpa @",
             "required": true,
             "value": "EmiliaMusic1_Bot"
         },
         "U_BRANCH": {
-            "description": "This branch the repo DON'T CHANGE!",
+            "description": "Branch ini dari repo JANGAN DIUBAH!",
             "required": true,
             "value": "main"
         },
         "HEROKU_API_KEY": {
-            "description": "Your heroku api key get from setting account.",
+            "description": "heroku api key dapatkan di pengaturan akun heroku.",
             "required": true,
             "value": ""
         },
         "HEROKU_APP_NAME": {
-            "description": "Your heroku app name, get it from top",
+            "description": "heroku app name, dapatkan dari nama paling atas",
             "required": true,
             "value": ""
         },
         "UPSTREAM_REPO": {
-            "description": "If you forking, put your link on this value. if you not forking LEAVE THIS ONE!",
+            "description": "Jika kamu fork, taruh link forkmu disini. namun jika tidak ABAIKAN SAJA!",
             "required": true,
             "value": "https://github.com/EmiliaTzy/EmiliaXMusic"
         },
         "BOT_IMG": {
-            "description": "For alive pic.",
+            "description": "Untuk alive pic.",
             "required": false,
             "value": "https://telegra.ph/file/5f5f8e412644c47cc836a.jpg"
         },
         "ASSISTANT_NAME": {
-            "description": "Fill with your assistant username without @",
+            "description": "Username Asistan tanpa @",
             "required": true,
-            "value": "kennedyassistant"
+            "value": "emiliaassistant"
         },
         "BG_IMAGE": {
-            "description": "For background image if you playing",
+            "description": "Untuk background gambar saat memutar",
             "required": false,
             "value": "https://telegra.ph/file/0f6f8a8a5ad69fe5ecf3d.png"
         },
         "ALIVE_EMOJI": {
-            "description": "for emoji in /alive command",
+            "description": "untuk emoji di perintah /alive ",
             "required": true,
             "value": "🌻"
         },
         "OWNER_NAME": {
-            "description": "Fill with your username account without @",
+            "description": "Username akunmu tanpa @",
             "required": false,
             "value": "azkiya"
         },
         "API_ID": {
-            "description": "APP ID from my.telegram.org",
+            "description": "APP ID dari my.telegram.org",
             "required": true
         },
         "API_HASH": {
-            "description": "API HASH from my.telegram.org",
+            "description": "API HASH dari my.telegram.org",
             "required": true
         },
         "SUDO_USERS": {
-            "description": "Fill with ID who you made a admin for bot (separate with space).",
+            "description": "Taruh ID untuk dijadikan admin untuk bot (dipisahkan with spasi).",
             "required": true
         },
         "DURATION_LIMIT": {
-            "description": "Duration limit for your musicplayer (in minutes).",
+            "description": "Batas durasi untuk musik yang diputar (dalam menit).",
             "required": true,
             "value": "15"
         },
         "PMPERMIT": {
-            "description": "for PMPERMIT on assistant account.",
+            "description": "Untuk PMPERMIT di akun asistan.",
             "required": false,
             "value": "ENABLE"
         },
         "UPDATES_CHANNEL": {
-            "description": "Fill with your channel username without @, if you haven't one you can leave it default",
+            "description": "Taruh Username channelmu tanpa @, Jika tidak punya BIARKAN SAJA",
             "required": false,
             "value": "EmiliaProject"
         },
         "GROUP_SUPPORT": {
-            "description": "Fill with your group username without @, if your haven't one you can leave it default",
+            "description": "Taruh username Grupmu tanpa @, Jika tidak punya BIARKAN SAJA",
             "required": false,
             "value": "EmiliaSupport"
         }
