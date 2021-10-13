@@ -36,8 +36,17 @@ async def _human_time_duration(seconds):
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""<b>👋 **Hello {message.from_user.mention}**</b> ❗
-**[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Is a bot designed to play music in your voice chat groups!**
-**To see some commands for using this bot, click » /help**""",
+**🤖 Perkenalkan saya [{BOT_NAME}](https://t.me/{BOT_USERNAME}) Adalah Bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup Telegram
+Saya Memiliki Banyak Fitur Praktis Seperti:
+
+➡️ Memutar Musik.
+➡️ Mendownload Lagu.
+➡️ Mencari Lagu Yang ingin di Putar atau di Download
+➡️ Fitur Keamanan dan Lainnya
+
+👩‍💻 Bot ini dikelola oleh {OWNER_NAME}
+
+✏️ Tekan » /help « Untuk Melihat Daftar Perintah Yang Saya Punya**""",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
@@ -65,26 +74,26 @@ async def cbabout(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""<b>❓ **About  [{bn}](https://t.me/{BOT_USERNAME})**</b> 
 
-➠ **A powerfull bot for playing music for groups!
+➠ **Kekuatan penuh bot untuk memutar musik di grup!
 
-➠ Working with pyrogram
+➠ Bekerja dengan pyrogram
 
-➠ Using Python 3.9.7
+➠ Menggunakan Python 3.9.7
 
-➠ Can play and download music or videos from YouTube
+➠ Dapat memutar dan mengunduh musik atau video dari YouTube
 
-➠ I can make you happy
+➠ Saya dapat membuatmu senang
 
-➠ For more info click /help
+➠ Info selebihnya tekan /help
 
-__{bn} licensed under the GNU General Public License v.3.0__
+__{bn} lisensi dibawah GNU General Public License v.3.0__
 
 • Updates channel @{UPDATES_CHANNEL}
 • Group Support @{GROUP_SUPPORT}
 • Assistant @{ASSISTANT_NAME}
 • Here is my [Owner](https://t.me/{OWNER_NAME})**
 
-❓ Wanna make your own bot music? try click Source button!""",
+❓ Ingin membuat musik bot Anda sendiri? coba klik tombol Source !""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -104,29 +113,29 @@ __{bn} licensed under the GNU General Public License v.3.0__
 @Client.on_callback_query(filters.regex("cbhelp"))
 async def cbhelp(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>{alv} Here is the help menu !</b>
+        f"""<b>{alv} Disini menu bantuan !</b>
 
-**In this menu you can open several available command menus, in each command menu there is also a brief explanation of each command**
+**Pada menu ini Anda dapat membuka beberapa menu perintah yang tersedia, di setiap menu perintah juga terdapat penjelasan singkat masing-masing perintah **
 
 💡 Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "📚 Basic Cmd", callback_data="cbbasic"
+                        "📚 Perintah Dasar", callback_data="cbbasic"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "📘 Admin Cmd", callback_data="cbadmin"
+                        "📘 Perintah Admin", callback_data="cbadmin"
                     ),
                     InlineKeyboardButton(
-                        "📗 Sudo Cmd", callback_data="cbsudo"
+                        "📗 Perintah Sudo", callback_data="cbsudo"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "📔 Fun Cmd", callback_data="cbfun"
+                        "📔 Perintah Fun", callback_data="cbfun"
                     )
                 ],
                 [
@@ -142,7 +151,7 @@ async def cbhelp(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbbasic"))
 async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>{alv} basic commands for bots
+        f"""<b>{alv} perintah dasar untuk bot
 
 [PENGATURAN GRUP]
 /play (judul) - memutar musik melalui youtube
@@ -180,9 +189,9 @@ async def cbadvanced(_, query: CallbackQuery):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await query.edit_message_text(
-        f"""**{alv} Holla I'm [{bn}](https://t.me/{BOT_USERNAME})**
+        f"""**{alv} Hallo saya [{bn}](https://t.me/{BOT_USERNAME})**
 
-{alv} **I'm Working Properly**
+{alv} **Saya bekerja dengan baik**
 
 {alv} **Bot : 6.0 LATEST**
 
@@ -190,7 +199,7 @@ async def cbadvanced(_, query: CallbackQuery):
 
 {alv} **Service Uptime : `{uptime}`**
 
-**Thanks For Using Me ♥️**""",
+**Terima kasih banyak sudah menggunakan saya ♥️**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -209,7 +218,7 @@ async def cbadvanced(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbadmin"))
 async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>{alv} command for group admin
+        f"""<b>{alv} Perintah anggota dalam grup
 
 /player - lihat status pemutaran
 /pause - menjeda pemutaran musik
@@ -235,7 +244,7 @@ async def cbadmin(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbsudo"))
 async def cbsudo(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>{alv} **command for sudo**
+        f"""<b>{alv} **perintah untuk sudo**
 
 **/userbotleaveall - hapus asisten dari semua grup
 /gcast - mengirim pesan global melalui asisten
@@ -264,7 +273,7 @@ jika menggunakan heroku
 @Client.on_callback_query(filters.regex("cbfun"))
 async def cbfun(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>{alv} **Command fun**
+        f"""<b>{alv} **Perintah fun**
 
 **/truth - check yourself
 /dare - check it yourself
@@ -299,7 +308,7 @@ async def cbguide(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "📚 Command List", callback_data="cbhelp"
+                        "📚 List Perintah", callback_data="cbhelp"
                     )
                 ],
                 [
