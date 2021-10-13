@@ -26,7 +26,7 @@ from helpers.gets import get_url, get_file_name
 @Client.on_message(command(["stream", f"stream@{BOT_USERNAME}"]) & other_filters)
 async def stream(_, message: Message):
 
-    lel = await message.reply("🔁 **processing** sound...")
+    lel = await message.reply("🔁 **memproses** suara...")
     costumer = message.from_user.mention
 
     keyboard = InlineKeyboardMarkup(
@@ -47,7 +47,7 @@ async def stream(_, message: Message):
 
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
-            return await lel.edit(f"❌ **music with duration more than** `{DURATION_LIMIT}` **minutes, can't play !**")
+            return await lel.edit(f"❌ **musik dengan durasi lebih dari** `{DURATION_LIMIT}` **menit, tidak dapat diputar !**")
 
         file_name = get_file_name(audio)
         title = audio.title
@@ -57,15 +57,15 @@ async def stream(_, message: Message):
             if not path.isfile(path.join("downloads", file_name)) else file_name
         )
     elif url:
-        return await lel.edit("❗ **reply to a telegram audio file.**")
+        return await lel.edit("❗ **balas ke file audio telegram.**")
     else:
-        return await lel.edit("❗ **reply to a telegram audio file.**")
+        return await lel.edit("❗ **balas ke file audio telegram.**")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
             photo="https://telegra.ph/file/36343b9d4742efe0b09cd.jpg",
-            caption=f"💡 **Track added to queue »** `{position}`\n\n🏷 **Name:** [{title[:40]}](https://t.me/{GROUP_SUPPORT})\n⏱ **Duration:** `{duration}`\n🎧 **Request by:** {costumer}",
+            caption=f"💡 **Track ditambahkan ke antrian »** `{position}`\n\n🏷 **Nama:** [{title[:40]}](https://t.me/{GROUP_SUPPORT})\n⏱ **Durasi:** `{duration}`\n🎧 **Permintaan dari:** {costumer}",
             reply_markup=keyboard,
         )
         return await lel.delete()
@@ -73,8 +73,8 @@ async def stream(_, message: Message):
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
             photo="https://telegra.ph/file/224178328de996a82507f.jpg",
-            caption=f"🏷 **Name:** [{title[:40]}](https://t.me/{GROUP_SUPPORT})\n⏱ **Duration:** `{duration}`\n💡 **Status:** `Playing`\n" \
-                   +f"🎧 **Request by:** {costumer}",
+            caption=f"🏷 **Nama:** [{title[:40]}](https://t.me/{GROUP_SUPPORT})\n⏱ **Durasi:** `{duration}`\n💡 **Status:** `Playing`\n" \
+                   +f"🎧 **Permintaan dari:** {costumer}",
             reply_markup=keyboard,
         )
         return await lel.delete()
