@@ -32,9 +32,18 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>👋 **Hello {message.from_user.mention}**</b> ❗
-**[{BOT_NAME}](https://t.me/{BOT_USERNAME}) Is a bot designed to play music in your voice chat groups!**
-**To see some commands for using this bot, click » /help**""",
+        f"""<b>👋 **Hallo {message.from_user.mention}**</b> ❗
+**🤖 Perkenalkan saya [{BOT_NAME}](https://t.me/{BOT_USERNAME}) Adalah Bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup Telegram
+Saya Memiliki Banyak Fitur Praktis Seperti:
+
+➡️ Memutar Musik.
+➡️ Mendownload Lagu.
+➡️ Mencari Lagu Yang ingin di Putar atau di Download
+➡️ Fitur Keamanan dan Lainnya
+
+👩‍💻 Bot ini dikelola oleh {OWNER_NAME}
+
+✏️ Tekan » /help « Untuk Melihat Daftar Perintah Yang Saya Punya**""",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
@@ -65,9 +74,9 @@ async def start(client: Client, message: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     delta_ping = time() - start
     await message.reply_text(
-        f"""<b>👋 **Hello {message.from_user.mention()}** ❗</b>
+        f"""<b>👋 **Hallo {message.from_user.mention()}** ❗</b>
 
-✅ **I'm active and ready to play music!
+✅ **Saya aktif dan siap untuk memutar musik!
 • Start time: `{START_TIME_ISO}`
 """,
         reply_markup=InlineKeyboardMarkup(
@@ -85,15 +94,15 @@ async def start(client: Client, message: Message):
 @Client.on_message(command(["help", f"help@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>👋 **Hello** {message.from_user.mention()}</b>
-**Please press the button below to read the explanation and see the list of available commands !**
+        f"""<b>👋 **Hallo** {message.from_user.mention()}</b>
+**Silakan tekan tombol di bawah ini untuk membaca penjelasan dan melihat daftar perintah yang tersedia !**
 
 💡 Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text=" HOW TO USE ME", callback_data=f"cbguide"
+                        text=" BAGAIMANA MENGGUNAKAN SAYA", callback_data=f"cbguide"
                     )
                 ]
             ]
@@ -103,9 +112,9 @@ async def help(client: Client, message: Message):
 @Client.on_message(command("help") & filters.private & ~filters.edited)
 async def help_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>👋 **Hello {message.from_user.mention} welcome to the help menu !**</b>
+        f"""<b>👋 **Hallo {message.from_user.mention} selamat datang di menu bantuan !**</b>
 
-**__In this menu you can open several available command menus, in each command menu there is also a brief explanation of each command__**
+**__Pada menu ini Anda dapat membuka beberapa menu perintah yang tersedia, di setiap menu perintah juga terdapat penjelasan singkat masing-masing perintah __**
 
 💡 Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
@@ -124,7 +133,7 @@ async def help_(client: Client, message: Message):
 @authorized_users_only
 async def ping_pong(client: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("`Pinging...`")
+    m_reply = await message.reply_text("`📶Pinging...`")
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
