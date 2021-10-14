@@ -51,10 +51,10 @@ Saya Memiliki Banyak Fitur Praktis Seperti:
                         "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ​ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        "ʀᴇᴘᴏ​​", url="https://github.com/EmiliaTzy/EmiliaXMusic"
+                        "ᴄʜᴀɴɴᴇʟ​​", url="https://t.me/DvrknessChannel"
                     ),
                     InlineKeyboardButton(
-                        "ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{GROUP_SUPPORT}")
+                        "ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}")
                 ],[
                     InlineKeyboardButton(
                         "ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ​ ❓​", callback_data="cbguide"
