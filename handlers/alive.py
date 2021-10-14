@@ -57,7 +57,7 @@ async def alive(client: Client, message: Message):
 
 {alv} **Bot : 6.0 TERAKHIR**
 
-{alv} **My Master : [Tuhan](https://t.me/{OWNER_NAME})**
+{alv} **My Master : [{OWNER_NAME}](https://t.me/{OWNER_NAME})**
 
 {alv} **Service Uptime : `{uptime}`**
 
