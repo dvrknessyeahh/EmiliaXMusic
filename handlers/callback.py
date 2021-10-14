@@ -54,10 +54,10 @@ Saya Memiliki Banyak Fitur Praktis Seperti:
                         "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ​ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        "ʀᴇᴘᴏ​​", url="https://github.com/EmiliaTzy/EmiliaXMusic"
+                        "ɢʀᴜᴘ​​", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{GROUP_SUPPORT}")
+                        "ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
                         "ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ​ ❓​", callback_data="cbguide"
@@ -98,7 +98,7 @@ __{bn} lisensi dibawah GNU General Public License v.3.0__
             [
                 [
                     InlineKeyboardButton(
-                        "sᴏᴜʀᴄᴇ​​", url="https://github.com/KennedyProject/KennedyXMusic"
+                        "sᴏᴜʀᴄᴇ​​", url="https://github.com/dvrknessyeahh/EmiliaXMusic"
                     ),
                     InlineKeyboardButton(
                         "ʙᴀᴄᴋ​", callback_data="cbadvanced"
