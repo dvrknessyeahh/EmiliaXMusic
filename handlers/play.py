@@ -531,14 +531,15 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                    InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data="closed")
+                    InlineKeyboardButton("ɢʀᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
+                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/fa2cdb8a14a26950da711.png"
+        thumb_name = "https://telegra.ph/file/2fd3ee6fc59e88c61e4a5.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -576,9 +577,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                    InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data="closed")
+                    InlineKeyboardButton("ɢʀᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
+                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -649,9 +651,10 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                    InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data="closed")
+                    InlineKeyboardButton("ɢʀᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
+                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
         )
             requested_by = message.from_user.first_name
@@ -745,9 +748,10 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                    InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data="closed")
+                    InlineKeyboardButton("ɢʀᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
+                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
         )
     requested_by = useer_name
@@ -890,9 +894,10 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                    InlineKeyboardButton(text="ᴄʟᴏsᴇ", callback_data="closed")
+                    InlineKeyboardButton("ɢʀᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
+                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
         )
     requested_by = message.from_user.first_name
