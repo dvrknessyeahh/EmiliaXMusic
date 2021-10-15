@@ -93,12 +93,12 @@ __{bn} lisensi dibawah GNU General Public License v.3.0__
 • Assistant @{ASSISTANT_NAME}
 • Here is my [Owner](https://t.me/{OWNER_NAME})**
 
-❓ Ingin membuat musik bot Anda sendiri? coba klik tombol Source !""",
+❓ Jika ingin menggunakan bot jangan lupa izin dulu !""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "sᴏᴜʀᴄᴇ​​", url="https://github.com/dvrknessyeahh/EmiliaXMusic"
+                        "Owner​​", url=f"https://t.me/{OWNER_NAME}"
                     ),
                     InlineKeyboardButton(
                         "ʙᴀᴄᴋ​", callback_data="cbadvanced"
