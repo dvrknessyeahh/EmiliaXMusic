@@ -32,14 +32,8 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>👋 **Hallo {message.from_user.mention}**</b> ❗
-**🤖 Perkenalkan saya [{BOT_NAME}](https://t.me/{BOT_USERNAME}) Adalah Bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup Telegram
-Saya Memiliki Banyak Fitur Praktis Seperti:
-
-➡️ Memutar Musik.
-➡️ Mendownload Lagu.
-➡️ Mencari Lagu Yang ingin di Putar atau di Download
-➡️ Fitur Keamanan dan Lainnya
+        f"""<b>👋 **Hay {message.from_user.mention}**</b> ❗
+**🤖 Saya adalah [{BOT_NAME}](https://t.me/{BOT_USERNAME}) Bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup Telegram
 
 👩‍💻 Bot ini dikelola oleh {OWNER_NAME}
 
