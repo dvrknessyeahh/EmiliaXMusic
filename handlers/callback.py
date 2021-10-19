@@ -35,14 +35,8 @@ async def _human_time_duration(seconds):
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>👋 **Hello {message.from_user.mention}**</b> ❗
-**🤖 Perkenalkan saya [{BOT_NAME}](https://t.me/{BOT_USERNAME}) Adalah Bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup Telegram
-Saya Memiliki Banyak Fitur Praktis Seperti:
-
-➡️ Memutar Musik.
-➡️ Mendownload Lagu.
-➡️ Mencari Lagu Yang ingin di Putar atau di Download
-➡️ Fitur Keamanan dan Lainnya
+        f"""<b>👋 **Hay {message.from_user.mention}**</b> ❗
+**🤖 Saya adalah [{BOT_NAME}](https://t.me/{BOT_USERNAME}) Adalah Bot Canggih Yang Dibuat Untuk Memutar Musik Di Obrolan Suara Grup Telegram
 
 👩‍💻 Bot ini dikelola oleh {OWNER_NAME}
 
@@ -74,24 +68,24 @@ async def cbabout(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""<b>❓ **About  [{bn}](https://t.me/{BOT_USERNAME})**</b> 
 
-➠ **Kekuatan penuh bot untuk memutar musik di grup!
+⛧ **Kekuatan penuh bot untuk memutar musik di grup!
 
-➠ Bekerja dengan pyrogram
+⛧ Bekerja dengan pyrogram
 
-➠ Menggunakan Python 3.9.7
+⛧ Menggunakan Python 3.9.7
 
-➠ Dapat memutar dan mengunduh musik atau video dari YouTube
+⛧ Dapat memutar dan mengunduh musik atau video dari YouTube
 
-➠ Saya dapat membuatmu senang
+⛧ Saya dapat membuatmu senang
 
-➠ Info selebihnya tekan /help
+⛧ Info selebihnya tekan /help
 
 __{bn} lisensi dibawah GNU General Public License v.3.0__
 
-• Updates channel @{UPDATES_CHANNEL}
-• Group Support @{GROUP_SUPPORT}
-• Assistant @{ASSISTANT_NAME}
-• Here is my [Owner](https://t.me/{OWNER_NAME})**
+⛧ Updates channel @{UPDATES_CHANNEL}
+⛧ Group Support @{GROUP_SUPPORT}
+⛧ Assistant @{ASSISTANT_NAME}
+⛧ Here is my [Owner](https://t.me/{OWNER_NAME})**
 
 ❓ Jika ingin menggunakan bot jangan lupa izin dulu !""",
         reply_markup=InlineKeyboardMarkup(
@@ -117,7 +111,7 @@ async def cbhelp(_, query: CallbackQuery):
 
 **Pada menu ini Anda dapat membuka beberapa menu perintah yang tersedia, di setiap menu perintah juga terdapat penjelasan singkat masing-masing perintah **
 
-💡 Bot by @{OWNER_NAME}""",
+⛧ Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -170,7 +164,7 @@ async def cbbasic(_, query: CallbackQuery):
 /alive - periksa status bot
 /start - memulai bot
 
-💡 Bot by @{OWNER_NAME}""",
+⛧ Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -228,7 +222,7 @@ async def cbadmin(_, query: CallbackQuery):
 /userbotjoin - undang asisten untuk bergabung dengan grup
 /musicplayer (on / off) - nyalakan / matikan pemutar musik di grup Anda
 
-💡 Bot by @{OWNER_NAME}""",
+⛧ Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -249,7 +243,7 @@ async def cbsudo(_, query: CallbackQuery):
 **/userbotleaveall - hapus asisten dari semua grup
 /gcast - mengirim pesan global melalui asisten
 /rmd - hapus file yang diunduh
-/ uptime - untuk melihat uptime dan waktu mulai bot diluncurkan
+/uptime - untuk melihat uptime dan waktu mulai bot diluncurkan
 jika menggunakan heroku
 /penggunaan - untuk memeriksa dyno heroku
 /update - untuk membangun, perbarui bot Anda
@@ -257,7 +251,7 @@ jika menggunakan heroku
 /setvar (var) (nilai) - untuk memperbarui variabel nilai Anda di heroku
 /delvar (var) - untuk menghapus var Anda di heroku.
 
-💡 Bot by @{OWNER_NAME}**""",
+⛧ Bot by @{OWNER_NAME}**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -280,7 +274,7 @@ async def cbfun(_, query: CallbackQuery):
 /q - to make quotes text
 /paste - pasting your text or document to pastebin into photo
 
-💡 Bot by @{OWNER_NAME}**""",
+⛧ Bot by @{OWNER_NAME}**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -303,7 +297,7 @@ async def cbguide(_, query: CallbackQuery):
 3.) Tambahkan @{ASSISTANT_NAME} ke grup Anda atau ketik /userbotjoin untuk mengundang asisten.
 4.) Aktifkan obrolan suara terlebih dahulu sebelum memutar musik.
 
-💡 Bot by @{OWNER_NAME}**""",
+⛧ Bot by @{OWNER_NAME}**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
