@@ -91,7 +91,7 @@ async def help(client: Client, message: Message):
         f"""<b>👋 **Hallo** {message.from_user.mention()}</b>
 **Silakan tekan tombol di bawah ini untuk membaca penjelasan dan melihat daftar perintah yang tersedia !**
 
-💡 Bot by @{OWNER_NAME}""",
+⛧ Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -110,7 +110,7 @@ async def help_(client: Client, message: Message):
 
 **__Pada menu ini Anda dapat membuka beberapa menu perintah yang tersedia, di setiap menu perintah juga terdapat penjelasan singkat masing-masing perintah __**
 
-💡 Bot by @{OWNER_NAME}""",
+⛧ Bot by @{OWNER_NAME}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
