@@ -26,7 +26,7 @@
         "BOT_USERNAME": {
             "description": "isi username bot tanpa @",
             "required": true,
-            "value": "EmiliaMusic1_Bot"
+            "value": "Username Bot"
         },
         "U_BRANCH": {
             "description": "Branch ini dari repo JANGAN DIUBAH!",
