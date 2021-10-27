@@ -1,9 +1,9 @@
 {
-    "name": "EmiliaX Music",
-    "logo": "https://telegra.ph/file/07bd09306a4485583893e.jpg",
-    "description": "EmiliaX Music allow you to stream music trought the telegram voice chat feature.",
+    "name": "Music Bot",
+    "logo": "",
+    "description": "Music Bot.",
     "keywords": ["music", "voice chat", "telegram"],
-    "repository": "https://github.com/EmiliaTzy/EmiliaXMusic",
+    "repository": "https://github.com/dvrknessyeahh/MusicBot",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -46,32 +46,32 @@
         "UPSTREAM_REPO": {
             "description": "Jika kamu fork, taruh link forkmu disini. namun jika tidak ABAIKAN SAJA!",
             "required": true,
-            "value": "https://github.com/EmiliaTzy/EmiliaXMusic"
+            "value": "https://github.com/dvrknessyeahh/MusicBot"
         },
         "BOT_IMG": {
             "description": "Untuk alive pic.",
             "required": false,
-            "value": "https://telegra.ph/file/5f5f8e412644c47cc836a.jpg"
+            "value": "https://telegra.ph/file/f9943634f8b31e2762b1c.jpg"
         },
         "ASSISTANT_NAME": {
             "description": "Username Asistan tanpa @",
             "required": true,
-            "value": "emiliaassistant"
+            "value": "assistant"
         },
         "BG_IMAGE": {
             "description": "Untuk background gambar saat memutar",
             "required": false,
-            "value": "https://telegra.ph/file/0f6f8a8a5ad69fe5ecf3d.png"
+            "value": "https://telegra.ph/file/9feea70a8233c239666b2.png"
         },
         "ALIVE_EMOJI": {
             "description": "untuk emoji di perintah /alive ",
             "required": true,
-            "value": "🌻"
+            "value": "⛧"
         },
         "OWNER_NAME": {
             "description": "Username akunmu tanpa @",
             "required": false,
-            "value": "azkiya"
+            "value": "username owner"
         },
         "API_ID": {
             "description": "APP ID dari my.telegram.org",
@@ -88,7 +88,7 @@
         "DURATION_LIMIT": {
             "description": "Batas durasi untuk musik yang diputar (dalam menit).",
             "required": true,
-            "value": "15"
+            "value": "120"
         },
         "PMPERMIT": {
             "description": "Untuk PMPERMIT di akun asistan.",
@@ -98,12 +98,12 @@
         "UPDATES_CHANNEL": {
             "description": "Taruh Username channelmu tanpa @, Jika tidak punya BIARKAN SAJA",
             "required": false,
-            "value": "EmiliaProject"
+            "value": "channel update username"
         },
         "GROUP_SUPPORT": {
             "description": "Taruh username Grupmu tanpa @, Jika tidak punya BIARKAN SAJA",
             "required": false,
-            "value": "EmiliaSupport"
+            "value": "group support username"
         }
     },
     "buildpacks": [
