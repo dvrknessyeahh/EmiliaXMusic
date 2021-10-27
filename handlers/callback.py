@@ -85,7 +85,6 @@ __{bn} lisensi dibawah GNU General Public License v.3.0__
 ⛧ Updates channel @{UPDATES_CHANNEL}
 ⛧ Group Support @{GROUP_SUPPORT}
 ⛧ Assistant @{ASSISTANT_NAME}
-⛧ Here is my [Owner](https://t.me/{OWNER_NAME})**
 
 ❓ Jika ingin menggunakan bot jangan lupa izin dulu !""",
         reply_markup=InlineKeyboardMarkup(
