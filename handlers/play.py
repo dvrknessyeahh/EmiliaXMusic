@@ -531,8 +531,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ɢʀᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
+                    InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
@@ -577,8 +577,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ɢʀᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
+                    InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
@@ -651,8 +651,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ɢʀᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
+                    InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
@@ -748,8 +748,8 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ɢʀᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
+                    InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
@@ -894,8 +894,8 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ɢʀᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
+                    InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
+                    InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
