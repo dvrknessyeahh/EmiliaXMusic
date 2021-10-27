@@ -1,7 +1,6 @@
-<h1 align="centre">Emilia X Music 🎵
+<h1 align="centre">🎵 Music Bot 🎵
 
 ### Music bot for playing music on telegram voice chat group.
-<p align="center"><a href="https://t.me/EmiliaSupport"><img src="https://telegra.ph/file/07bd09306a4485583893e.jpg" width="300"></a></p>
 
 <h3>Requirements</h3>
 
@@ -12,7 +11,8 @@
 
 ### Get STRING_SESSION from here:
 
-[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@KennedyProject/String-Session#main.py)
+[![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@DvrknessDvrknes/PyrogramString?lite=1&outputonly=1#main.py
+)
 
 
 ### Commands 
@@ -63,22 +63,7 @@
 ### Heroku Deployment 💜
 The easy way to host this bot, deploy to Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/EmiliaTzy/EmiliaXMusic)
-
-### Deploy On VPS 💙
-
-- `sudo apt update && apt upgrade -y`
-- `sudo apt install git curl python3-pip ffmpeg -y`
-- `pip3 install -U pip`
-- `curl -sL https://deb.nodesource.com/setup_16.x | bash -`
-- `sudo apt-get install -y nodejs`
-- `npm i -g npm`
-- `git clone https://github.com/KennedyProject/KennedyXMusic` # Clone your repo.
-- `cd KennedyXMusic`
-- `pip3 install -U -r requirements.txt`
-- `cp example.env .env` #Use vim to edit ENVs
-- `vim .env` #Fill up your ENVs ( Steps press `i` to enter in insert mode then edit the file. Press `Esc` to exit the editing mode then type `:wq!` and press `Enter` key to save the file.)
-- `python3 main.py` # Run the bot
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dvrknessyeahh/MusicBot)
 
 ### Credits 🕊️
 - [Kennedy](https://github.com/KennedyProject) Dev
@@ -86,6 +71,3 @@ The easy way to host this bot, deploy to Heroku
 - [RojSerBest](https://github.com/rojserbest) CallsMusic Developer
 - [Veez Music](https://github.com/levina-lab/veezmusic) Veez Music
 - [Emilia](https://github.com/EmiliaTzy) Emilia Music
-
-### Support & Updates 🛵
-<a href="https://t.me/EmiliaSupport"><img src="https://img.shields.io/badge/Join-Group%20Support-red.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/EmiliaProject"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
