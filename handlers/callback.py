@@ -45,16 +45,16 @@ async def cbstart(_, query: CallbackQuery):
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ​ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "➕ TAMBAHKAN SAYA KE GRUP ANDA​ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                        "ɢʀᴜᴘ​​", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "GRUP​​", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")
+                        "CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
                     InlineKeyboardButton(
-                        "ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ​ ❓​", callback_data="cbguide"
+                        "BAGAIMANA MENGGUNAKAN SAYA​ ❓​", callback_data="cbguide"
                     )
                 ]
             ]
@@ -66,7 +66,7 @@ async def cbstart(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbabout"))
 async def cbabout(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>❓ **About  [{bn}](https://t.me/{BOT_USERNAME})**</b> 
+        f"""<b>❓ **Tentang [{bn}](https://t.me/{BOT_USERNAME})**</b> 
 
 ⛧ **Kekuatan penuh bot untuk memutar musik di grup!
 
@@ -92,10 +92,10 @@ __{bn} lisensi dibawah GNU General Public License v.3.0__
             [
                 [
                     InlineKeyboardButton(
-                        "Owner​​", url=f"https://t.me/{OWNER_NAME}"
+                        "OWNER​​", url=f"https://t.me/{OWNER_NAME}"
                     ),
                     InlineKeyboardButton(
-                        "ʙᴀᴄᴋ​", callback_data="cbadvanced"
+                        "Kembali​", callback_data="cbadvanced"
                     )
                 ]
             ]
@@ -134,7 +134,7 @@ async def cbhelp(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "BACK", callback_data="cbguide"
+                        "Kembali", callback_data="cbguide"
                     )
                 ]
             ]
@@ -198,10 +198,10 @@ async def cbadvanced(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "ᴀʙᴏᴜᴛ", callback_data="cbabout"
+                        "Tentang", callback_data="cbabout"
                     ),
                     InlineKeyboardButton(
-                        "ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ]
             ]
@@ -227,7 +227,7 @@ async def cbadmin(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "BACK", callback_data="cbhelp"
+                        "Kembali", callback_data="cbhelp"
                     )
                 ]
             ]
@@ -256,7 +256,7 @@ jika menggunakan heroku
             [
                 [
                     InlineKeyboardButton(
-                        "BACK", callback_data="cbhelp"
+                        "Kembali", callback_data="cbhelp"
                     )
                 ]
             ]
@@ -279,7 +279,7 @@ async def cbfun(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "BACK", callback_data="cbhelp"
+                        "Kembali", callback_data="cbhelp"
                     )
                 ]
             ]
@@ -307,7 +307,7 @@ async def cbguide(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🗑 Close", callback_data="close"
+                        "🗑 Tutup", callback_data="close"
                     )
                 ]
             ]
