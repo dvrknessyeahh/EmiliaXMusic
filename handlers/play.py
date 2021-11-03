@@ -25,6 +25,8 @@ from config import (
     UPDATES_CHANNEL,
     GROUP_SUPPORT,
     ASSISTANT_NAME,
+    ANONBT_DVRK,
+    CRJDH_DVRK,
     aiohttpsession,
     BOT_NAME as bn,
 )
@@ -535,10 +537,13 @@ async def play(_, message: Message):
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
                 [
-                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/AnonymousChat666bot")
+                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/{ANONBT_DVRK}")
                 ],
                 [
-                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/carijodohonlinebot")
+                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/{CRJDH_DVRK}")
+                ],
+                [
+                    InlineKeyboardButton(text="Close", callback_data="closed")
                 ],
             ]
         )
@@ -586,10 +591,13 @@ async def play(_, message: Message):
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
                 [
-                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/AnonymousChat666bot")
+                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/{ANONBT_DVRK}")
                 ],
                 [
-                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/carijodohonlinebot")
+                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/{CRJDH_DVRK}")
+                ],
+                [
+                    InlineKeyboardButton(text="Close", callback_data="closed")
                 ],
             ]
         )
@@ -665,10 +673,13 @@ async def play(_, message: Message):
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
                 [
-                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/AnonymousChat666bot")
+                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/{ANONBT_DVRK}")
                 ],
                 [
-                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/carijodohonlinebot")
+                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/{CRJDH_DVRK}")
+                ],
+                [
+                    InlineKeyboardButton(text="Close", callback_data="closed")
                 ],
             ]
         )
@@ -767,10 +778,13 @@ async def lol_cb(b, cb):
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
                 [
-                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/AnonymousChat666bot")
+                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/{ANONBT_DVRK}")
                 ],
                 [
-                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/carijodohonlinebot")
+                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/{CRJDH_DVRK}")
+                ],
+                [
+                    InlineKeyboardButton(text="Close", callback_data="closed")
                 ],
             ]
         )
@@ -918,10 +932,13 @@ async def ytplay(_, message: Message):
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
                 [
-                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/AnonymousChat666bot")
+                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/{ANONBT_DVRK}")
                 ],
                 [
-                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/carijodohonlinebot")
+                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/{CRJDH_DVRK}")
+                ],
+                [
+                    InlineKeyboardButton(text="Close", callback_data="closed")
                 ],
             ]
         )
