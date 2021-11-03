@@ -85,14 +85,6 @@
             "description": "Taruh ID untuk dijadikan admin untuk bot (dipisahkan with spasi).",
             "required": true
         },
-        "ANONBT_DVRK": {
-            "description": "ANONBT DVRK.",
-            "required": true
-        },
-        "CRJDH_DVRK": {
-            "description": "CRJDH DVRK.",
-            "required": true
-        },
         "DURATION_LIMIT": {
             "description": "Batas durasi untuk musik yang diputar (dalam menit).",
             "required": true,
