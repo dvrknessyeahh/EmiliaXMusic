@@ -25,8 +25,6 @@ from config import (
     UPDATES_CHANNEL,
     GROUP_SUPPORT,
     ASSISTANT_NAME,
-    ANONBT_DVRK,
-    CRJDH_DVRK,
     aiohttpsession,
     BOT_NAME as bn,
 )
@@ -536,15 +534,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
-                [
-                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/{ANONBT_DVRK}")
-                ],
-                [
-                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/{CRJDH_DVRK}")
-                ],
-                [
-                    InlineKeyboardButton(text="Close", callback_data="closed")
-                ],
+                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
@@ -590,15 +580,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
-                [
-                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/{ANONBT_DVRK}")
-                ],
-                [
-                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/{CRJDH_DVRK}")
-                ],
-                [
-                    InlineKeyboardButton(text="Close", callback_data="closed")
-                ],
+                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -672,15 +654,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
-                [
-                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/{ANONBT_DVRK}")
-                ],
-                [
-                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/{CRJDH_DVRK}")
-                ],
-                [
-                    InlineKeyboardButton(text="Close", callback_data="closed")
-                ],
+                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
         )
             requested_by = message.from_user.first_name
@@ -777,15 +751,7 @@ async def lol_cb(b, cb):
                     InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
-                [
-                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/{ANONBT_DVRK}")
-                ],
-                [
-                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/{CRJDH_DVRK}")
-                ],
-                [
-                    InlineKeyboardButton(text="Close", callback_data="closed")
-                ],
+                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
         )
     requested_by = useer_name
@@ -931,15 +897,7 @@ async def ytplay(_, message: Message):
                     InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
-                [
-                    InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/{ANONBT_DVRK}")
-                ],
-                [
-                    InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/{CRJDH_DVRK}")
-                ],
-                [
-                    InlineKeyboardButton(text="Close", callback_data="closed")
-                ],
+                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
             ]
         )
     requested_by = message.from_user.first_name
