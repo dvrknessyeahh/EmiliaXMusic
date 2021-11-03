@@ -534,7 +534,8 @@ async def play(_, message: Message):
                     InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
-                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
+                [InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/AnonymousChat666bot")],
+                [InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/carijodohonlinebot")],
             ]
         )
         file_name = get_file_name(audio)
@@ -580,7 +581,8 @@ async def play(_, message: Message):
                     InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
-                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
+                [InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/AnonymousChat666bot")],
+                [InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/carijodohonlinebot")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -654,7 +656,8 @@ async def play(_, message: Message):
                     InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
-                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
+                [InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/AnonymousChat666bot")],
+                [InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/carijodohonlinebot")],
             ]
         )
             requested_by = message.from_user.first_name
@@ -751,7 +754,8 @@ async def lol_cb(b, cb):
                     InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
-                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
+                [InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/AnonymousChat666bot")],
+                [InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/carijodohonlinebot")],
             ]
         )
     requested_by = useer_name
@@ -897,7 +901,8 @@ async def ytplay(_, message: Message):
                     InlineKeyboardButton("GRUP", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("CHANNEL", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],
-                [InlineKeyboardButton(text="🗑 ᴄʟᴏꜱᴇ", callback_data="cls")],
+                [InlineKeyboardButton("Anonymous Chat Bot", url=f"https://t.me/AnonymousChat666bot")],
+                [InlineKeyboardButton("Cari Jodoh Bot", url=f"https://t.me/carijodohonlinebot")],
             ]
         )
     requested_by = message.from_user.first_name
